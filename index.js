@@ -1,3 +1,43 @@
+/**
+ * INFO:
+ * 
+ * Tipos de parâmetros:
+ * 
+ * Query Params: /route?param1=value1&param2=value2&...&paramn=valuen
+ *      Filtros, paginação
+ * 
+ *      const params = request.query; 
+ *      Retorna um objeto js com os params:
+ *      {
+ *          param1: value1,
+ *          param2: value2,
+ *          ...,
+ *          paramn: valuen
+ *      }
+ *
+ * Route Params: /route/:param (exemplo de chamada= /route/584)
+ *      Identificar recursos
+ *      const params = request.params; 
+ *      Retorna um objeto js com o param:
+ *      {
+ *          param: 584
+ *      }
+ * 
+ * Request Body:
+ *      Corpo da requisição, usado para criar ou alterar recursos 
+ *      (por exemplo, em um método POST)
+ *  
+ *      Exemplo de requisição: /route
+ *      O body pode ser um JSON: api.use(express.json());
+ *      {
+ *          "name": "name1",
+ *          "age": "age1"
+ *      }
+ *      
+ *      const params = request.body;
+ *      
+ */
+
 const express = require('express');
 
 const api = express();
