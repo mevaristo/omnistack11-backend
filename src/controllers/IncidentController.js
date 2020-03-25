@@ -21,9 +21,9 @@ module.exports = {
     },
 
     async index(request, response) {
-        const ongs = await connection('incidents').select('*');
+        const incidents = await connection('incidents').select('*');
 
-        return response.json(ongs);
+        return response.json(incidents);
     },
 
     async delete(request, response) {
