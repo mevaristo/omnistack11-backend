@@ -1,6 +1,6 @@
 const
     crypto      = require('crypto'),
-    connection  = require('./database/connection');
+    connection  = require('../database/connection');
 
 module.exports = {
     async create(request, response) {
